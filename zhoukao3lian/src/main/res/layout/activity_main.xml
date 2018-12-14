@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <ImageView
+        android:id="@+id/btn_return"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/fanhui" />
+
+    <EditText
+        android:id="@+id/btn_putin"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toRightOf="@id/btn_return"
+        app:layout_constraintRight_toLeftOf="@id/btn_sousuo" />
+
+    <ImageView
+        android:id="@+id/btn_sousuo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/sousuo"
+        app:layout_constraintRight_toLeftOf="@id/btn_qiehuan" />
+
+    <ImageView
+        android:id="@+id/btn_qiehuan"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/qiehuan"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llinerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/btn_putin">
+
+        <Button
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="排序" />
+
+        <Button
+            android:id="@+id/btn_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="销量排序" />
+
+        <Button
+            android:id="@+id/btn_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="价格排序" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="排序" />
+    </LinearLayout>
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/xlistview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llinerlayout"
+
+        />
+</android.support.constraint.ConstraintLayout>
