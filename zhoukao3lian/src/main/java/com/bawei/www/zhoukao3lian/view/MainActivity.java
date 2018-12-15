@@ -22,12 +22,14 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements Iview {
 
     private Ipresonter ipresonter;
-
-    private int page;
     private XRecyclerView xlistview;
-    private ListRecyclviewAdapter lp;
     private Boolean p = true;
     private LinearLayoutManager layoutManager;
+
+
+    private int page;
+    private ListRecyclviewAdapter lp;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,15 +39,12 @@ public class MainActivity extends AppCompatActivity implements Iview {
         page = 1;
 
         xlistview = findViewById(R.id.xlistview);
-
-
         layoutManager = new LinearLayoutManager(this);
         xlistview.setLayoutManager(layoutManager);
         layoutManager.setOrientation(OrientationHelper.VERTICAL);
 
         lp = new ListRecyclviewAdapter(this);
         xlistview.setAdapter(lp);
-
 
         ipresonter = new Ipresonter(this);
         initData();
